@@ -1,4 +1,3 @@
-fixtures/swift/compliantFile.swift: super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil) not called
 fixtures/swift/offendingFile.swift: super.viewDidLoad() not called
 fixtures/swift/offendingFile.swift: super.viewWillAppear(animated) not called
 fixtures/swift/offendingFile.swift: super.viewWillDisappear(animated) not called

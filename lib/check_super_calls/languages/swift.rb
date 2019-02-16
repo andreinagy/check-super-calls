@@ -86,7 +86,7 @@ class Swift
         regex_any_spaces_between(
           ['override', 'init', '\(nibName nibNameOrNil: String\?,' \
             ' bundle nibBundleOrNil: Bundle\?\) \{',
-           'super', '.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)']
+           'super', '.init\(nibName: nibNameOrNil, bundle: nibBundleOrNil\)']
         )
       )
     ]
