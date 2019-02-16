@@ -1,0 +1,17 @@
+fixtures/swift/compliantFile.swift: super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil) not called
+fixtures/swift/offendingFile.swift: super.viewDidLoad() not called
+fixtures/swift/offendingFile.swift: super.viewWillAppear(animated) not called
+fixtures/swift/offendingFile.swift: super.viewWillDisappear(animated) not called
+fixtures/swift/offendingFile.swift: super.viewDidAppear(animated) not called
+fixtures/swift/offendingFile.swift: super.viewDidDisappear(animated) not called
+fixtures/swift/offendingFile.swift: super.viewWillLayoutSubviews() not called
+fixtures/swift/offendingFile.swift: super.viewDidLayoutSubviews() not called
+fixtures/swift/offendingFile.swift: super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil) not called
+fixtures/ObjC/offendingFile.m: [super viewDidLoad] not called
+fixtures/ObjC/offendingFile.m: [super viewWillAppear:animated] not called
+fixtures/ObjC/offendingFile.m: [super viewWillDisappear:animated] not called
+fixtures/ObjC/offendingFile.m: [super viewDidAppear:animated] not called
+fixtures/ObjC/offendingFile.m: [super viewDidDisappear:animated] not called
+fixtures/ObjC/offendingFile.m: [super viewWillLayoutSubviews] not called
+fixtures/ObjC/offendingFile.m: [super viewDidLayoutSubviews] not called
+fixtures/ObjC/offendingFile.m: [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]; not called

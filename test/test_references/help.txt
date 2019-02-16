@@ -1,0 +1,2 @@
+Usage: check-super-calls.rb [input directory]
+    -h, --help                       Prints this help

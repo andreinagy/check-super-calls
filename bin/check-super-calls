@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'check_super_calls'
+
+::CheckSuperCalls.main(ARGV)
