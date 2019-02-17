@@ -2,7 +2,22 @@
 
 Script that checks if Swift and Objective C subclasses call specific superclass methods.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/check_super_calls`. To experiment with that code, run `bin/console` for an interactive prompt.
+Missing super calls in subclasses create unusual and hard to debug issues.
+Having suffered in the past on a few projects, an automatic tool would help reduce above problems.
+It checks by regex if a file overrides speciffic methods. Then it checks with another regex 
+that it calls it's parent class counterpart.
+
+Only the following are implemented:
+- viewDidLoad
+- viewWillAppear
+- viewDidAppear
+- viewWillDisappear
+- viewDidDisappear
+- viewWillLayoutSubviews
+- viewDidLayoutSubviews
+- init(nibName..)
+
+Feel free to reach out with suggestions.
 
 ## Installation
 
@@ -23,6 +38,8 @@ Or install it yourself as:
 ## Usage
 
 Run check-super-calls path/to/project/directory.
+
+
 
 ## Development
 

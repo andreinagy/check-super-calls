@@ -34,7 +34,21 @@ Gem::Specification.new do |spec|
   # }
   # end
 
-  spec.files = Dir['lib/**/*'] + ['bin/check-super-calls']
+  # spec.files = Dir['lib/**/*']
+  spec.files = Dir.glob("{bin,lib}/**/*")
+  # spec.files = [
+  #   'lib/check_super_calls.rb',
+  #   'lib/check_super_calls/arguments_parser.rb',
+  #   'lib/check_super_calls/helpers.rb',
+  #   'lib/check_super_calls/languages',
+  #   'lib/check_super_calls/languages/obj_c.rb',
+  #   'lib/check_super_calls/languages/pattern.rb',
+  #   'lib/check_super_calls/languages/swift.rb',
+  #   'lib/check_super_calls/shell_adapter.rb',
+  #   'lib/check_super_calls/version.rb',
+  #   'bin/check-super-calls'
+  # ]
+  # puts spec.files
 
   spec.bindir        = 'bin'
   spec.executables   = 'check-super-calls'
