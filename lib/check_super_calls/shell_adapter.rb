@@ -5,6 +5,8 @@ require_relative 'languages/obj_c.rb'
 # Adapter which handles shell access.
 class ShellAdapter
   def process_files(ignore_regex_string, base_path)
+    result = []
+
     [
       Swift.new,
       ObjC.new
@@ -18,11 +20,11 @@ class ShellAdapter
           next if file_content !~ pattern.definition
 
           if file_content !~ pattern.check
-            puts file + ': ' + pattern.name + ' not called'
-            # nandrei add to array and return
+            result += [file + ': ' + pattern.name + ' not called']
           end
         end
       end
     end
+    result
   end
 end

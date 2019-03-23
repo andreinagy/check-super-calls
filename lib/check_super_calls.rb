@@ -6,10 +6,14 @@ module CheckSuperCalls
   class Error < StandardError; end
   # Your code goes here...
   def self.main(args)
+    arguments_string = args.join(' ')
     options = Parser.parse(args)
 
     shell = ShellAdapter.new
     result = shell.process_files(options.ignore_regex_string, options.input_directory)
-    # nandrei puts result
+    
+    puts "#{$PROGRAM_NAME} #{arguments_string}" if options.echo_invocation
+    puts "Total issues: #{result.length || 0}" if options.print_totals
+    puts result unless result.nil?
   end
 end

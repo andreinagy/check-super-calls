@@ -2,7 +2,9 @@ require 'optparse'
 
 # https://docs.ruby-lang.org/en/2.1.0/OptionParser.html
 Options = Struct.new(:input_directory,
-  :ignore_regex_string
+  :ignore_regex_string,
+  :echo_invocation,
+  :print_totals
   )
 
 SCRIPT_NAME = "check-super-calls".freeze
@@ -12,6 +14,8 @@ class Parser
   def self.default_options
     result = Options.new
     result.input_directory = '.'
+    result.echo_invocation = false
+    result.print_totals = false
     result
   end
   private_class_method :default_options
@@ -36,7 +40,19 @@ class Parser
         'Case sensitive ignore files regex. Eg. "Ignore|Debug"') do |v|
      result.ignore_regex_string = v
    end
-    end
+
+    o.on('-e',
+      '--echo',
+      'Echo invocation') do |_v|
+   result.echo_invocation = true
+ end
+
+ o.on('-t',
+   '--total',
+  'Print total') do |_v|
+result.print_totals = true
+end
+end
 
     begin
       options_parser.parse!(argv)
