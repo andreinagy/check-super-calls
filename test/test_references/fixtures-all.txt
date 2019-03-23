@@ -1,0 +1,18 @@
+./bin/check-super-calls test/fixtures/ -e -t -i Ignore
+Total issues: 16
+test/fixtures/swift/offendingFile.swift: super.viewDidLoad() not called
+test/fixtures/swift/offendingFile.swift: super.viewWillAppear(animated) not called
+test/fixtures/swift/offendingFile.swift: super.viewWillDisappear(animated) not called
+test/fixtures/swift/offendingFile.swift: super.viewDidAppear(animated) not called
+test/fixtures/swift/offendingFile.swift: super.viewDidDisappear(animated) not called
+test/fixtures/swift/offendingFile.swift: super.viewWillLayoutSubviews() not called
+test/fixtures/swift/offendingFile.swift: super.viewDidLayoutSubviews() not called
+test/fixtures/swift/offendingFile.swift: super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil) not called
+test/fixtures/ObjC/offendingFile.m: [super viewDidLoad] not called
+test/fixtures/ObjC/offendingFile.m: [super viewWillAppear:animated] not called
+test/fixtures/ObjC/offendingFile.m: [super viewWillDisappear:animated] not called
+test/fixtures/ObjC/offendingFile.m: [super viewDidAppear:animated] not called
+test/fixtures/ObjC/offendingFile.m: [super viewDidDisappear:animated] not called
+test/fixtures/ObjC/offendingFile.m: [super viewWillLayoutSubviews] not called
+test/fixtures/ObjC/offendingFile.m: [super viewDidLayoutSubviews] not called
+test/fixtures/ObjC/offendingFile.m: [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]; not called

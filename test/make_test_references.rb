@@ -8,9 +8,18 @@ REFERENCE_DATA = [
   ['--- Test Fixtures',
    'test/fixtures/',
    'test/test_references/fixtures.txt'],
-  ['--- Test Fixtures',
+  ['--- Test Ignore',
    'test/fixtures/ -i Ignore',
-   'test/test_references/fixtures-ignore.txt']
+   'test/test_references/fixtures-ignore.txt'],
+  ['--- Test Echo',
+   'test/fixtures/ -e',
+   'test/test_references/fixtures-echo.txt'],
+  ['--- Test Totals',
+   'test/fixtures/ -t -i Ignore',
+   'test/test_references/fixtures-totals.txt'],
+  ['--- Test All switches',
+   'test/fixtures/ -e -t -i Ignore',
+   'test/test_references/fixtures-all.txt']
 ].freeze
 
 def generate_one_reference(args, file)

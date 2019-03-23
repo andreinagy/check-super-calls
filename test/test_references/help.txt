@@ -1,3 +1,5 @@
 Usage: {SCRIPT_NAME} [input directory]
     -h, --help                       Prints this help
     -i, --ignore-regex=IGNORE        Case sensitive ignore files regex. Eg. "Ignore|Debug"
+    -e, --echo                       Echo invocation
+    -t, --total                      Print total
