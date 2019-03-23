@@ -6,8 +6,11 @@ REFERENCE_DATA = [
    '',
    'test/test_references/help.txt'],
   ['--- Test Fixtures',
-   'fixtures/',
-   'test/test_references/fixtures.txt']
+   'test/fixtures/',
+   'test/test_references/fixtures.txt'],
+   ['--- Test Fixtures',
+    'test/fixtures/ -i Ignore',
+    'test/test_references/fixtures-ignore.txt']
 ].freeze
 
 def generate_one_reference(args, file)
