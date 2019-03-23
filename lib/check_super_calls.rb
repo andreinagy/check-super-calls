@@ -5,10 +5,11 @@ require 'check_super_calls/shell_adapter.rb'
 module CheckSuperCalls
   class Error < StandardError; end
   # Your code goes here...
-  def self.main(_args)
-    options = Parser.parse(ARGV)
+  def self.main(args)
+    options = Parser.parse(args)
 
     shell = ShellAdapter.new
     result = shell.process_files(nil, options.input_directory)
+    # nandrei puts result
   end
 end

@@ -9,9 +9,9 @@ class ShellAdapter
       Swift.new,
       ObjC.new
     ].each do |language|
-      result = find_files(ignore_list, base_path, language.file_regex)
+      files = find_files(ignore_list, base_path, language.file_regex)
 
-      result.each do |file|
+      files.each do |file|
         file_content = File.open(file, 'r:UTF-8').read
 
         language.patterns.each do |pattern|
@@ -19,6 +19,7 @@ class ShellAdapter
 
           if file_content !~ pattern.check
             puts file + ': ' + pattern.name + ' not called'
+            # nandrei add to array and return
           end
         end
       end

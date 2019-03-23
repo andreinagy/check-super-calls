@@ -3,6 +3,8 @@ require 'optparse'
 # https://docs.ruby-lang.org/en/2.1.0/OptionParser.html
 Options = Struct.new(:input_directory)
 
+SCRIPT_NAME = "check-super-calls".freeze
+
 # Parses command line arguments
 class Parser
   def self.default_options
@@ -19,8 +21,8 @@ class Parser
     result = default_options
 
     options_parser = OptionParser.new do |o|
-      o.banner = 'Usage: check-super-calls.rb [input directory]'
-
+      o.banner = 'Usage: {SCRIPT_NAME} [input directory]'
+# nandrei add an ignore option.
       o.on('-h',
            '--help',
            'Prints this help') do

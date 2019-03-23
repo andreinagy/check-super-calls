@@ -1,5 +1,9 @@
 require_relative 'pattern.rb'
 
+# consider
+# https://github.com/realm/SwiftLint/blob/0.13.2/Source/SwiftLintFramework/Rules/RuleConfigurations/OverridenSuperCallConfiguration.swift#L12
+# consider prohibited super calls https://github.com/realm/SwiftLint/pull/971
+
 class Swift
   attr_accessor :file_regex, :patterns
   def initialize
