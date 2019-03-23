@@ -11,7 +11,7 @@ module CheckSuperCalls
 
     shell = ShellAdapter.new
     result = shell.process_files(options.ignore_regex_string, options.input_directory)
-    
+
     puts "#{$PROGRAM_NAME} #{arguments_string}" if options.echo_invocation
     puts "Total issues: #{result.length || 0}" if options.print_totals
     puts result unless result.nil?

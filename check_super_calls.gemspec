@@ -35,7 +35,7 @@ Gem::Specification.new do |spec|
   # end
 
   # spec.files = Dir['lib/**/*']
-  spec.files = Dir.glob("{bin,lib}/**/*")
+  spec.files = Dir.glob('{bin,lib}/**/*')
   # spec.files = [
   #   'lib/check_super_calls.rb',
   #   'lib/check_super_calls/arguments_parser.rb',

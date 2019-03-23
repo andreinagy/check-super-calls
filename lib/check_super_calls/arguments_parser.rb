@@ -2,12 +2,11 @@ require 'optparse'
 
 # https://docs.ruby-lang.org/en/2.1.0/OptionParser.html
 Options = Struct.new(:input_directory,
-  :ignore_regex_string,
-  :echo_invocation,
-  :print_totals
-  )
+                     :ignore_regex_string,
+                     :echo_invocation,
+                     :print_totals)
 
-SCRIPT_NAME = "check-super-calls".freeze
+SCRIPT_NAME = 'check-super-calls'.freeze
 
 # Parses command line arguments
 class Parser
@@ -28,7 +27,7 @@ class Parser
 
     options_parser = OptionParser.new do |o|
       o.banner = 'Usage: {SCRIPT_NAME} [input directory]'
-# nandrei add an ignore option.
+      # nandrei add an ignore option.
       o.on('-h',
            '--help',
            'Prints this help') do
@@ -36,23 +35,23 @@ class Parser
         exit 0
       end
       o.on('-iIGNORE',
-        '--ignore-regex=IGNORE',
-        'Case sensitive ignore files regex. Eg. "Ignore|Debug"') do |v|
-     result.ignore_regex_string = v
-   end
+           '--ignore-regex=IGNORE',
+           'Case sensitive ignore files regex. Eg. "Ignore|Debug"') do |v|
+        result.ignore_regex_string = v
+      end
 
-    o.on('-e',
-      '--echo',
-      'Echo invocation') do |_v|
-   result.echo_invocation = true
- end
+      o.on('-e',
+           '--echo',
+           'Echo invocation') do |_v|
+        result.echo_invocation = true
+      end
 
- o.on('-t',
-   '--total',
-  'Print total') do |_v|
-result.print_totals = true
-end
-end
+      o.on('-t',
+           '--total',
+           'Print total') do |_v|
+        result.print_totals = true
+      end
+    end
 
     begin
       options_parser.parse!(argv)

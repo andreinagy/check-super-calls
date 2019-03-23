@@ -8,9 +8,9 @@ REFERENCE_DATA = [
   ['--- Test Fixtures',
    'test/fixtures/',
    'test/test_references/fixtures.txt'],
-   ['--- Test Fixtures',
-    'test/fixtures/ -i Ignore',
-    'test/test_references/fixtures-ignore.txt']
+  ['--- Test Fixtures',
+   'test/fixtures/ -i Ignore',
+   'test/test_references/fixtures-ignore.txt']
 ].freeze
 
 def generate_one_reference(args, file)
