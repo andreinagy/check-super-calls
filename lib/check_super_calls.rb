@@ -9,7 +9,7 @@ module CheckSuperCalls
     options = Parser.parse(args)
 
     shell = ShellAdapter.new
-    result = shell.process_files(nil, options.input_directory)
+    result = shell.process_files(options.ignore_regex_string, options.input_directory)
     # nandrei puts result
   end
 end

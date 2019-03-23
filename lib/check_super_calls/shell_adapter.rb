@@ -4,12 +4,12 @@ require_relative 'languages/obj_c.rb'
 
 # Adapter which handles shell access.
 class ShellAdapter
-  def process_files(ignore_list, base_path)
+  def process_files(ignore_regex_string, base_path)
     [
       Swift.new,
       ObjC.new
     ].each do |language|
-      files = find_files(ignore_list, base_path, language.file_regex)
+      files = find_files(ignore_regex_string, base_path, language.file_regex)
 
       files.each do |file|
         file_content = File.open(file, 'r:UTF-8').read
